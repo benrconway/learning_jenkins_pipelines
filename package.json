@@ -1,0 +1,21 @@
+{
+  "name": "jenkins",
+  "version": "1.0.0",
+  "description": "Progressive steps to understanding... hopefully.",
+  "main": "index.js",
+  "scripts": {
+    "Leeroy": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benrconway/learning_jenkins_pipelines.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benrconway/learning_jenkins_pipelines/issues"
+  },
+  "homepage": "https://github.com/benrconway/learning_jenkins_pipelines#readme"
+}
