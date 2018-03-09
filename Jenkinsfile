@@ -1,20 +1,43 @@
+// pipeline {
+//     agent any
+//
+//     stages {
+//         stage('Build') {
+//             steps {
+//                 echo 'Building..'
+//             }
+//         }
+//         stage('Test') {
+//             steps {
+//                 echo 'Testing.. and stuff'
+//             }
+//         }
+//         stage('Deploy') {
+//             steps {
+//                 echo 'Deploying....'
+//             }
+//         }
+//     }
+// }
+
+// how does this change things
 pipeline {
     agent any
-
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                sh 'make'
             }
         }
-        stage('Test') {
+        stage('Test'){
             steps {
-                echo 'Testing.. and stuff'
+                sh 'make check'
+                junit 'reports/**/*.xml'
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying....'
+                sh 'make publish'
             }
         }
     }
