@@ -19,8 +19,8 @@ describe('API test', () => {
             .get('/api')
             .end((err, res) => {
                 res.should.have.status(200);
-                // res.body.should.be.a({name: 'John'});
-                // res.body.length.should.be.eql(1);
+                res.body.should.be.a('object');
+                res.body.should.be.eql({name: "John"});
               done();
             });
       });
