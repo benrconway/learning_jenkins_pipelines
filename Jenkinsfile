@@ -5,8 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Attempting to run.'
-                sh 'npm install'
-                sh 'npm run Leeroy'
+            
             }
         }
         stage('Test') {
