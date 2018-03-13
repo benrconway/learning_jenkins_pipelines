@@ -14,7 +14,7 @@ pipeline {
             steps {
               nodejs('testJS') {
                 sh "npm install"
-                // npm start &
+                sh "npm start &"
               }
                 // echo 'Attempting to run.'
                 // sh "npm install"
@@ -26,7 +26,7 @@ pipeline {
             steps {
                 echo 'Testing.. and stuff'
                 nodejs('testJS') {
-                    npm test
+                    sh "npm test"
                 }
 
                 // sh "npm test"
