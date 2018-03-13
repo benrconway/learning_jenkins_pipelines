@@ -12,8 +12,8 @@ pipeline {
         stage('Build') {
             steps {
               nodejs('testJS') {
-                npm install
-                npm start &
+                sh "npm install"
+                // npm start &
               }
                 // echo 'Attempting to run.'
                 // sh "npm install"
