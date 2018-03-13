@@ -11,24 +11,24 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-              nodejs('testJS') {
+              // nodejs('testJS') {
+              //   sh "npm install"
+              //   // npm start &
+              // }
+                echo 'Attempting to run.'
                 sh "npm install"
-                // npm start &
-              }
-                // echo 'Attempting to run.'
-                // sh "npm install"
-                // sh "npm start &"
+                sh "npm start &"
 
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing.. and stuff'
-                nodejs('testJS') {
-                    npm test
-                }
+                // nodejs('testJS') {
+                //     npm test
+                // }
 
-                // sh "npm test"
+                sh "npm test"
             }
         }
         // stage('Deploy') {
