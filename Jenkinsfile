@@ -2,15 +2,17 @@ pipeline {
     agent any
 
     stages {
-        // stage('Build') {
-        //     steps {
-        //         echo 'Attempting to run.'
-        //
-        //     }
+        stage('Build') {
+            steps {
+                echo 'Attempting to run.'
+                sh './jenkins/scripts/build.sh'
+
+            }
         }
         stage('Test') {
             steps {
                 echo 'Testing.. and stuff'
+                sh './jenkins/scripts/test.sh'
             }
         }
         // stage('Deploy') {
