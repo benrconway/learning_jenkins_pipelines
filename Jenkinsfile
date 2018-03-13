@@ -12,13 +12,13 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-              // nodejs('testJS') {
-              //   sh "npm install"
-              //   // npm start &
-              // }
-                echo 'Attempting to run.'
+              nodejs('testJS') {
                 sh "npm install"
-                sh "npm start &"
+                // npm start &
+              }
+                // echo 'Attempting to run.'
+                // sh "npm install"
+                // sh "npm start &"
 
             }
         }
