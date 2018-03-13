@@ -1,19 +1,21 @@
 pipeline {
     agent any
-
+    environment {
+      CI = 'true'
+    }
     stages {
         stage('Build') {
             steps {
                 echo 'Attempting to run.'
-                npm install
-                npm start &
+                sh "npm install"
+                sh "npm start &"
 
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing.. and stuff'
-                npm test
+                sh "npm test"
             }
         }
         // stage('Deploy') {
