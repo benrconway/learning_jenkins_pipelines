@@ -5,14 +5,15 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Attempting to run.'
-                sh './jenkins/scripts/build.sh'
+                npm install
+                npm start &
 
             }
         }
         stage('Test') {
             steps {
                 echo 'Testing.. and stuff'
-                sh './jenkins/scripts/test.sh'
+                npm test
             }
         }
         // stage('Deploy') {
