@@ -25,11 +25,11 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Testing.. and stuff'
-                // nodejs('testJS') {
-                //     npm test
-                // }
+                nodejs('testJS') {
+                    npm test
+                }
 
-                sh "npm test"
+                // sh "npm test"
             }
         }
         // stage('Deploy') {
